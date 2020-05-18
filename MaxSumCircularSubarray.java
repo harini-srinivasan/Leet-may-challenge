@@ -8,6 +8,7 @@ class Solution {
         int maxTotal = A[0];
         int minTotal = A[0];
         int minSoFar = A[0];
+        
         for(int i = 1; i < A.length; i++){
             int num = A[i];
             maxSoFar = Math.max(num, maxSoFar + num);
@@ -18,6 +19,7 @@ class Solution {
             
             sum += num;
         }
+        
         if(sum == minSoFar) return maxTotal;
         return Math.max(sum - minTotal, maxTotal);
     }
